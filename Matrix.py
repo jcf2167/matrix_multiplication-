@@ -12,6 +12,25 @@ class Matrix:
 
 	def at(self, i,j):
 		return self.arr[i][j]
+
+	def putAt(self, i, j):
+		
+	
+	def getRow(index):
+		return self.arr[index]
+
+	def getRowLength():
+		return self.row
+
+	def getColLength():
+		return self.col
+
+	def multiplyMatrix(b):
+		tempMatrix = Matrix(self.row, b.getColLength)
+		for i in range(self.row):
+			for j in range(b.getColLength):
+				for k in range(b.getRowLength):
+					tempMatrix
 		
 	def printMatrix(self):
 		stri = ""
