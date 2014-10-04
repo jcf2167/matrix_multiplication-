@@ -1,5 +1,4 @@
 import sys
-import math
 
 
 class Matrix:
@@ -13,7 +12,7 @@ class Matrix:
     def makeMatrix(self, twod_list):
         for i in xrange(len(twod_list)):
             for j in xrange(len(twod_list[i])):
-                self.arr[i][j] = int(twod_list[i][j])
+                self.arr[i][j] = float(twod_list[i][j])
 
     def __getitem__(self, key):
         return self.arr[key]
@@ -41,7 +40,12 @@ class Matrix:
             if i is not 0:
                 stri += "\n"
             for j in xrange(len(self.arr[i])):
-                stri += str(self.arr[i][j]) + " "
+		num  = self.arr[i][j]
+		if num < 10000000:
+                	stri += str(self.arr[i][j]) + " "
+		else:
+			stri += "%.3e" % num + " "
+	stri += "\n"
         return stri
 
 
